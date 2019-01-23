@@ -11,7 +11,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 import com.example.springboot.service.datafetcher.AllUserDataFetcher;
-import com.example.springboot.service.datafetcher.BookUserFetcher;
+import com.example.springboot.service.datafetcher.UserFetcher;
 
 import graphql.GraphQL;
 import graphql.schema.GraphQLSchema;
@@ -30,7 +30,7 @@ public class GraphQLService {
 	@Autowired
 	private AllUserDataFetcher allUsersDataFetcher;
 	@Autowired
-	private BookUserFetcher userDataFetcher;
+	private UserFetcher userDataFetcher;
 	
 	//This will load the schema at application startup process
 	@PostConstruct

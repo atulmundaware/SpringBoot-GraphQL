@@ -10,15 +10,15 @@ import graphql.schema.DataFetcher;
 import graphql.schema.DataFetchingEnvironment;
 
 @Component
-public class BookUserFetcher implements DataFetcher<UserModel>{
+public class UserFetcher implements DataFetcher<UserModel>{
 
 	@Autowired
-	UserRepo bookRepo;
+	UserRepo userRepo;
 	
 	
 	@Override
 	public UserModel get(DataFetchingEnvironment environment) {
-		return bookRepo.getOne(environment.getArgument("id"));
+		return userRepo.getOne(environment.getArgument("id"));
 	}
 
 }
